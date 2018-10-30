@@ -1,8 +1,8 @@
 import { createStore, combineReducers } from 'redux'
-import todos from './todos.reducer'
+import groceries from './grocery.reducer'
 
 let rootReducer = combineReducers({
-  todos: todos
+  groceries: groceries
 })
 
 export default createStore(rootReducer)
