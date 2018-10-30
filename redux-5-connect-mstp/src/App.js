@@ -7,7 +7,6 @@ class App extends Component {
   state = { newTodo: '' }
   handleChange = e => this.setState({ newTodo: e.target.value })
   render() {
-    let listOfTodos = this.props.todos.map(todo => <li key={todo.id}>{todo.title}</li>)
     return (
       <div className="App">
         <p>
@@ -22,14 +21,11 @@ class App extends Component {
           >Submit</button>
         </p>
         <h3>Todo List:</h3>
-        <ul>{listOfTodos}</ul>
+        <ul>Put the todos here...</ul>
       </div>
     )
   }
 }
 
-const mapStateToProps = state => ({
-  todos: state.todos
-})
 
-export default connect(mapStateToProps, { addTodo, removeTodo })(App)
+export default connect(null, { addTodo, removeTodo })(App)
