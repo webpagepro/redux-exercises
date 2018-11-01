@@ -1,24 +1,24 @@
 import React, { Component } from 'react'
 import './App.css'
 import { connect } from 'react-redux'
-import { addGrocery, removeGrocery } from './redux/grocery.actions'
+import { addTodo, removeTodo } from './redux/todos.actions'
 
 class App extends Component {
-  state = { newGroceryItem: '' }
-  handleChange = e => this.setState({ newGroceryItem: e.target.value })
+  state = { newTodo: '' }
+  handleChange = e => this.setState({ newTodo: e.target.value })
   render() {
     let listOfGroceries = this.props.groceries.map(grocery => <li key={grocery.id}>{grocery.item}</li>)
     return (
       <div className="App">
         <p>
-          New Grocery: 
+          New newTodo: 
           <input 
             type="text"
             onChange={this.handleChange}
-            value={this.state.newGroceryItem}
+            value={this.state.newTodo}
           />
           <button
-            onClick={() => this.props.addGrocery(this.state.newGroceryItem)}
+            onClick={() => this.props.addGrocery(this.state.newTodo)}
           >Submit</button>
         </p>
         <h3>Grocery List:</h3>

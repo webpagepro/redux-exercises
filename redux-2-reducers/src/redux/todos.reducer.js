@@ -1,4 +1,4 @@
-import { ADD_GROCERY, REMOVE_GROCERY } from './grocery.actions'
+import { ADD_TODO, REMOVE_TODO } from './todos.actions'
 
 let initialState = [
   {
